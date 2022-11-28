@@ -1,0 +1,224 @@
+body {
+    background-color: #0a1014;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+p,
+h1,
+label {
+    color: cornflowerblue;
+    text-align: center;
+
+
+}
+
+p,
+label {
+    font-size: 20px;
+}
+
+input {
+    border-bottom: 2px solid white;
+    border-radius: 150px;
+    padding: 10px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: transparent;
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+
+}
+
+#watermarkSks {
+    font-size: 300px;
+    text-align: center;
+    display: block;
+
+    position: fixed;
+
+    /* bottom: 50%; */
+    /* left: 50%; */
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0.03;
+    z-index: -1;
+
+
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.timer {
+    color: red;
+    font-size: xx-large;
+}
+
+table thead tr,
+table thead tr th,
+table thead tr td {
+    padding: 20px;
+
+    border-radius: 10px;
+}
+
+
+
+table {
+    background-color: #0f1c24;
+    /* border: 2px solid white; */
+    border-collapse: collapse;
+    border-radius: 10px;
+    color: white;
+}
+
+div#setting p {
+    padding: 10px;
+    background-color: #030d13;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+
+
+}
+
+div#setting label,
+div#setting input {
+    display: block;
+    margin: 20px auto;
+
+}
+
+#setting-img {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+}
+
+#setting {
+    width: fit-content;
+
+}
+
+
+input[type="submit"] {
+    display: block;
+    margin: auto;
+}
+
+select {
+    padding: 10px;
+    border-radius: 100px;
+    color: black;
+    font-size: 15px;
+}
+
+/* #setting-img:hover {
+    transform: rotate(360deg);
+    transition-duration: 5s;
+} */
+
+#startGuessingBtn {
+    padding: 10px;
+    display: block;
+    border-radius: 100px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    color: white;
+    font-size: 15px;
+    z-index: 10;
+    background-color: #0a1014;
+}
+
+#startGuessingBtn:hover {
+    padding: 12px;
+    background-color:#0f1c24;
+    transition: all 0.05s;
+
+}
+
+
+
+/* Media Queries for max 1200px*/
+@media only screen and (max-width: 1200px) {
+
+    div#setting label,
+    div#setting input {
+
+        display: block;
+        margin: auto;
+    }
+
+    p#gameRule {
+        text-align: justify;
+    }
+
+}
+
+/* Media Queries for max 600px*/
+@media only screen and (max-width: 600px) {
+    #watermarkSks {
+        font-size: 150px;
+    }
+}
